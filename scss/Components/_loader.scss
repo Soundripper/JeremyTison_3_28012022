@@ -1,0 +1,77 @@
+$loaderAnimDuration : 3000ms;
+
+.loader{
+    display : flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+    animation: loader $loaderAnimDuration alternate both;
+    &__logo{
+        align-self: center;
+        animation: logoProgress $loaderAnimDuration alternate both;
+    }
+    &__bar{
+        display: flex;
+        height: 50px;
+        /*background-color: azure;*/
+        padding : 20px;
+    }
+    &__barProgress{
+        width: 100%;
+        background: linear-gradient($colour-gradup, $colour-graddown);
+
+        transform-origin: left;
+        animation: barProgress $loaderAnimDuration alternate both;
+        border-radius: 30px;
+    }
+}
+
+.container{
+    animation: containerVisibility $loaderAnimDuration alternate both;
+}
+
+@keyframes barProgress{
+    0%{
+        transform: scaleX(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
+
+@keyframes logoProgress{
+    0%{
+        transform: scaleX(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
+
+@keyframes loader {
+    0% {
+        visibility :  visible;
+    }
+    100% {
+        visibility : hidden;
+    }
+}
+
+
+@keyframes containerVisibility{
+    0% {
+        visibility : hidden;
+    }
+    100% {
+        visibility : visible;
+    }
+}
