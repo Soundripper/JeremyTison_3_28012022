@@ -1,0 +1,33 @@
+.restaurants{
+    width: 100%;
+    background-color: $colour-mid;
+    &__title{
+        padding-left: $content-padding;
+        padding-top: $content-padding;
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: $content-padding;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .restaurants{
+        width: 100%;
+        background-color: $colour-mid;
+        &__content{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: $content-padding;
+        }
+    }
+    .restaurantCard{
+        margin: 0 20px 0px 20px;
+    }
+}

@@ -1,0 +1,15 @@
+.fonctionnement{
+    width: 100%;
+    &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        padding: $content-padding;
+        &>p{
+            margin-bottom:30px;
+            align-self:flex-start;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.bigButton{
+    color: $colour-secondary;
+    padding: 20px 50px 20px 50px;
+    height: 3rem;
+    border-radius: 3rem;
+    border: none;
+    background: linear-gradient($colour-gradup, $colour-graddown);
+    @include shadow;
+    font-size: 1em;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+        cursor: pointer;
+    }
+}

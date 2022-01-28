@@ -1,0 +1,22 @@
+@mixin textBig{
+    font-size: 1.5em;
+    font-family: 'Roboto';
+    font-weight: 900;
+}
+
+@mixin textAver{
+    font-size: 1.3em;
+    font-family: 'Roboto';
+    font-weight: 600;
+}
+
+@mixin textLt{
+    font-size: 1.1em;
+    font-family: 'Roboto';
+    font-weight: 300;
+    opacity: 100%;
+}
+
+@mixin shadow{
+    box-shadow: 0px 2px 5px grey;
+} 

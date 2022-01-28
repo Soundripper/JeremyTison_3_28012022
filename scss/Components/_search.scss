@@ -1,0 +1,25 @@
+.search{
+    display : flex;
+    background-color: $colour-dark;
+    height : 3rem;
+    input#searchInput{
+        height: 2rem;
+        background-color: unset;
+        border: none;
+        font-weight: 900;
+        font-size: 1em;
+        width: 130px;
+        text-align: center;
+    }
+    i{
+        margin-right: 10px;
+    }
+    &__btn{
+        margin: auto;
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}

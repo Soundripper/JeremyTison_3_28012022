@@ -1,0 +1,34 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-items: space-between;
+    padding: $content-padding;
+    background-color: lighten($colour-primary, 20%);
+    & i{
+        color: $colour-secondary;
+    }
+    &__logo{
+        margin-bottom: 15px;
+        font-size: 1.5em;
+        color: $colour-secondary;
+    }
+    & a {
+        text-decoration: none;
+        font-size:medium;
+        font-weight: 400;
+        color: $colour-secondary;
+    }
+    &__links{
+        display: flex;
+        flex-direction: column;
+        flex:1;
+        justify-items: space-between;
+    }
+    &__partenaire i{
+        font-size: 0.7em;
+    }
+    &__links div{
+        margin-bottom: 6px;
+    }
+}
+
