@@ -147,6 +147,15 @@ $glissement-duration: 500ms;
         .menu-item__check{animation: glissementOut $glissement-duration ease-in-out alternate both;}
         .menu-item__price{animation: glissementOut $glissement-duration ease-in-out alternate both;}
     }*/
+    &:active{
+        cursor: pointer;
+        .menu-item__check{transform: translateX(0px);}
+        .menu-item__price{transform: translateX(0px);}
+        .menu-item__check--circle{transform: rotate(360deg);}
+        .menu-item__description>p{width: 200px;}
+        /*.menu-item__check{animation-play-state: running;}
+        .menu-item__price{animation-play-state: running;}*/
+    }
 }
 
 /*@keyframes glissement{
