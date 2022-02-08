@@ -1,17 +1,17 @@
 @mixin textBig{
-    font-size: 1.5em;
+    font-size: 1em;
     font-family: 'Roboto';
     font-weight: 900;
 }
 
 @mixin textAver{
-    font-size: 1.3em;
+    font-size: 0.9em;
     font-family: 'Roboto';
     font-weight: 600;
 }
 
 @mixin textLt{
-    font-size: 1.1em;
+    font-size: 0.8em;
     font-family: 'Roboto';
     font-weight: 300;
     opacity: 100%;

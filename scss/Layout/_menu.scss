@@ -1,12 +1,11 @@
 .menu{
     display: flex;
     flex-direction: column;
-    padding: $content-padding;
+    padding: 30px 15px 80px 15px;
     background-color: $colour-dark;
     border-radius: 50px;
     flex:1;
     margin-bottom: -50px;
-    padding-bottom: 80px;
     width:100%;
     &__partieContainer{
         margin-bottom: 30px;
@@ -32,29 +31,11 @@
             align-items: center;
     }
 
-    @media screen and (min-width: 972px) {
-        .menu{
-            &__parts{
-                margin: 0;
-                flex-direction: row;
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-            &__partieContainer{
-                margin: 0 40px 0 40px;
-            }
-            &__commander{
-                margin-top: 30px;
-                margin-bottom: 30px;
-            }
-        }
-    }
-
     &__partieTxt{
         font-weight: 600;
         opacity: 0.6;
         margin-bottom: 3px;
-        font-size: 1.4em;
+        font-size: 0.9em;
         text-transform:uppercase;
     }
     &__HR{
@@ -77,6 +58,25 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 972px) {
+    .menu{
+        padding: 30px 30px 80px 30px;
+        &__parts{
+            margin: 0;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        &__partieContainer{
+            margin: 0 40px 0 40px;
+        }
+        &__commander{
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
     }
 }
 
