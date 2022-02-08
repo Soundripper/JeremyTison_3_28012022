@@ -114,6 +114,7 @@ $glissement-duration: 500ms;
     flex-direction: row;
     @include shadow;
     overflow: hidden;
+    -webkit-clip-path: content-box;
     justify-content: space-between;
     margin-bottom: 20px;
     animation: fonctionnementCardAnim 1000ms $animation-delay;
