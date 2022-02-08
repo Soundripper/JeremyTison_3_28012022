@@ -18,28 +18,38 @@
         position: relative;
         margin-bottom: 30px;
     }
-    .restaurantCard__heartE, .restaurantCard__heartF{
-        position: absolute;
-        right: 10px;
-        border-radius: 5px;
-            &>p{
-                font-size: 2em;
-                .restaurantCard__heart--iconF::before{
-                    background: -webkit-gradient(linear, left top, left bottom, from($colour-graddown), to($colour-gradup));
-                    -webkit-background-clip: text;
-                    background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    opacity:0;
-                    transition: opacity 300ms;
-                }
-            &:hover{
-                cursor: pointer;
-                .restaurantCard__heart--iconF::before{
-                    opacity: 1;
-                }
+    &__partieContainer{
+        max-width: 450px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        flex: 1;
+    }
+    &__parts{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: center;
+    }
+
+    @media screen and (min-width: 972px) {
+        .menu{
+            &__parts{
+                margin: 0;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            &__partieContainer{
+                margin: 0 40px 0 40px;
+            }
+            &__commander{
+                margin-top: 30px;
+                margin-bottom: 30px;
             }
         }
     }
+
     &__partieTxt{
         font-weight: 600;
         opacity: 0.6;
@@ -67,6 +77,29 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 30px;
+    }
+}
+
+.restaurantCard__heartE, .restaurantCard__heartF{
+    position: absolute;
+    right: 10px;
+    border-radius: 5px;
+        &>p{
+            font-size: 2em;
+            .restaurantCard__heart--iconF::before{
+                background: -webkit-gradient(linear, left top, left bottom, from($colour-graddown), to($colour-gradup));
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                opacity:0;
+                transition: opacity 300ms;
+            }
+        &:hover{
+            cursor: pointer;
+            .restaurantCard__heart--iconF::before{
+                opacity: 1;
+            }
+        }
     }
 }
 
@@ -166,4 +199,5 @@ $glissement-duration: 500ms;
         transform: translateX(80px);
     }
 }*/
+
 
