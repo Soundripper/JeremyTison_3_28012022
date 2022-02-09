@@ -68,15 +68,6 @@
                     opacity:0;
                     transition: opacity 300ms;
                 }
-            /*&:hover{
-                cursor: pointer;
-                .restaurantCard__heart--iconF::before{
-                    transform-origin: -2px 2px;
-                    animation: opacity 1000ms;
-                    animation-fill-mode: forwards;
-                    animation-direction: alternate;
-                }
-            }*/
             &:hover{
                 cursor: pointer;
                 .restaurantCard__heart--iconF::before{
@@ -86,13 +77,3 @@
         }
     }
 }
-
-/*@keyframes opacity {
-    0% {
-        opacity:0;
-      }
-    100% {
-        opacity: 1;
-      }
-    
-}*/

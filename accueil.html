@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohmyfood</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        document.addEventListener("click", x=>0)
+        </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="__logo title-font"><h1>ohmyfood</h1></div>
+        </header>
+
+        <div class="search">
+            <div class="search__btn">
+                <i class="fas fa-map-marker-alt"></i>
+                <input type="text" class="regular-font" name="searchInput" id="searchInput" placeholder="Paris, Bellevile">
+            </div>
+        </div>
+
+        <div class="description">
+            <p class="textBig">Réservez le menu qui <br> vous convient !</p>
+            <p class="textLt">Découvrez des restaurants d'exception, <br> sélectionnés par nos soins</p>
+            <!--<button class="bigButton"> <p class="textAver">Explorez nos restaurants</p> </button>-->
+            <a class="bigButton textAver" href="#restaurants">Explorez nos restaurants</a>
+        </div>
+
+        <div class="fonctionnement">
+            <div class="fonctionnement__content">
+                <p class="textBig">Fonctionnement</p>
+                <div class="fonctionnementCard fonctionnementCard--1">
+                    <div class="fonctionnementCard__content">
+                        <p class="fonctionnementCard__number textAver">1</p>
+                        <i class="fas fa-mobile-alt fonctionnementCard__content--icon"></i>
+                        <div class="textAver"><p>Choisissez un restaurant</p> </div>
+                    </div>
+                </div>
+                <div class="fonctionnementCard fonctionnementCard--2">
+                    <div class="fonctionnementCard__content">
+                        <p class="fonctionnementCard__number textAver">2</p>
+                        <i class="fas fa-list-ul fonctionnementCard__content--icon"></i>
+                        <div class="textAver"><p>Composez votre menu</p> </div>
+                    </div>
+                </div>
+                <div class="fonctionnementCard fonctionnementCard--3">
+                    <div class="fonctionnementCard__content">
+                        <p class="fonctionnementCard__number textAver">3</p>
+                        <i class="fas fa-store fonctionnementCard__content--icon"></i>
+                        <div class="textAver"><p>Dégustez au restaurant</p> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="restaurants" class="restaurants">
+            <p class="textBig restaurants__title">Restaurants</p>
+            <div class="restaurants__content">
+                <div class="restaurantCard" onclick="location.href='palette.html';">
+                    <div class="restaurantCard__content">
+                        <div class="restaurantCard__image"><img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût"></div>
+                        <div class="restaurantCard__txt">  
+                            <p class="textAver">La palette du goût</p>
+                            <p class="textLt">Ménilmontant</p>
+                        </div>
+                        <div class="restaurantCard__nouveau">
+                            <p class="textAver">Nouveau</p>
+                        </div>
+                        <div class="restaurantCard__heartE">
+                            <p class="textAver"><i class="far fa-heart restaurantCard__heart--iconE"></i></p>
+                        </div>
+                        <div class="restaurantCard__heartF">
+                            <p class="textAver"><i class="fas fa-heart restaurantCard__heart--iconF"></i></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="restaurantCard" onclick="location.href='lanote.html';">
+                    <div class="restaurantCard__content">
+                        <div class="restaurantCard__image"><img src="images\restaurants\stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée"></div>
+                        <div class="restaurantCard__txt">  
+                            <p class="textAver">La note enchantée</p>
+                            <p class="textLt">Charonne</p>
+                        </div>
+                        <div class="restaurantCard__nouveau">
+                            <p class="textAver">Nouveau</p>
+                        </div>
+                        <div class="restaurantCard__heartE">
+                            <p class="textAver"><i class="far fa-heart restaurantCard__heart--iconE"></i></p>
+                        </div>
+                        <div class="restaurantCard__heartF">
+                            <p class="textAver"><i class="fas fa-heart restaurantCard__heart--iconF"></i></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="restaurantCard" onclick="location.href='alafr.html';">
+                    <div class="restaurantCard__content">
+                        <div class="restaurantCard__image"><img src="images\restaurants\toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française"></div>
+                        <div class="restaurantCard__txt">  
+                            <p class="textAver">À la française</p>
+                            <p class="textLt">Cité rouge</p>
+                        </div>
+                        <!--<div class="restaurantCard__nouveau">
+                            <p class="textAver">Nouveau</p>
+                        </div>-->
+                        <div class="restaurantCard__heartE">
+                            <p class="textAver"><i class="far fa-heart restaurantCard__heart--iconE"></i></p>
+                        </div>
+                        <div class="restaurantCard__heartF">
+                            <p class="textAver"><i class="fas fa-heart restaurantCard__heart--iconF"></i></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="restaurantCard" onclick="location.href='delice.html';">
+                    <div class="restaurantCard__content">
+                        <div class="restaurantCard__image"><img src="images\restaurants\louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens"></div>
+                        <div class="restaurantCard__txt">  
+                            <p class="textAver">Le délice des sens</p>
+                            <p class="textLt">Folie-Méricourt</p>
+                        </div>
+                        <!--<div class="restaurantCard__nouveau">
+                            <p class="textAver">Nouveau</p>
+                        </div>-->
+                        <div class="restaurantCard__heartE">
+                            <p class="textAver"><i class="far fa-heart restaurantCard__heart--iconE"></i></p>
+                        </div>
+                        <div class="restaurantCard__heartF">
+                            <p class="textAver"><i class="fas fa-heart restaurantCard__heart--iconF"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer">
+                <p class="footer__logo title-font">ohmyfood</p>
+                <div class="footer__links">
+                    <div class="footer__proposer textAver"><i class="fas fa-utensils"></i> <a href="#" >Proposer un restaurant</a></div>
+                    <div class="footer__partenaire textAver"><i class="fas fa-hands-helping"></i> <a href="#">Devenir partenaire</a></div>
+                    <div class="footer__mentions textAver"> <a href="#">Mentions légales</a></div>
+                    <div class="footer__contact textAver"><a href="mailto:jerrsoundripper@gmail.com">Contact</a></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
