@@ -150,7 +150,7 @@ header {
 
 .description {
   padding: 30px;
-  height: 300px;
+  height: 240px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -161,9 +161,8 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   text-align: center;
   background-color: #F6F6F6;
 }
@@ -479,7 +478,7 @@ header {
 }
 
 .menu-item__description p {
-  width: 300px;
+  width: 330px;
   -webkit-transition: all 500ms;
   transition: all 500ms;
   white-space: nowrap;
