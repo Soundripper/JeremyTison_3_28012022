@@ -506,23 +506,22 @@ header {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  width: 80px;
   -webkit-transition: all 500ms;
   transition: all 500ms;
-  width: 100px;
   background-color: #99E2D0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 2em;
+  font-size: 1.5em;
   color: white;
 }
 
@@ -555,7 +554,7 @@ header {
 }
 
 .menu-item:hover .menu-item__description > p {
-  width: 200px;
+  width: 180px;
 }
 
 /*@keyframes glissement{

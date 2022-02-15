@@ -152,15 +152,14 @@ $glissement-duration: 500ms;
     }
     &__check{
         flex:1;
+        width: 80px;
         transition: all $glissement-duration;
-        width: 100px;
         background-color: $colour-check;
         display: flex;
         transform: translateX(100%);
-        display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 2em;
+        font-size: 1.5em;
         color: $colour-secondary;
         //animation: glissement $glissement-duration ease-in-out alternate both paused;
         &--circle{
@@ -173,7 +172,7 @@ $glissement-duration: 500ms;
         .menu-item__check{transform: translateX(0px);}
         .menu-item__price{transform: translateX(0px);}
         .menu-item__check--circle{transform: rotate(360deg);}
-        .menu-item__description>p{width: 200px;}
+        .menu-item__description>p{width: 180px;}
         /*.menu-item__check{animation-play-state: running;}
         .menu-item__price{animation-play-state: running;}*/
     }
