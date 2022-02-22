@@ -266,6 +266,12 @@ header {
   margin-bottom: -50px;
 }
 
+@media screen and (min-width: 769px) {
+  .menu {
+    padding: 30px 30px 80px 30px;
+  }
+}
+
 .menu__nomRestaurant {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -279,6 +285,7 @@ header {
           align-items: center;
   position: relative;
   margin-bottom: 30px;
+  margin-left: 5px;
 }
 
 .menu__partieContainer {
@@ -362,7 +369,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   margin-top: 10px;
 }
 
@@ -431,13 +438,13 @@ header {
 
 @media screen and (max-width: 321px) {
   .menu-item__description {
-    width: 200px;
+    width: 190px;
   }
 }
 
 @media screen and (max-width: 281px) {
   .menu-item__description {
-    width: 190px;
+    width: 160px;
   }
 }
 
