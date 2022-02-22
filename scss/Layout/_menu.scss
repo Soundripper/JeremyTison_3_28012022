@@ -6,10 +6,6 @@
     border-radius: 50px;
     flex:1;
     margin-bottom: -50px;
-    width:100%;
-    &__partieContainer{
-        margin-bottom: 30px;
-    }
     &__nomRestaurant{
         display: flex;
         flex-direction: row;
@@ -18,19 +14,22 @@
         margin-bottom: 30px;
     }
     &__partieContainer{
-        max-width: 450px;
-        display: flex;
         flex-direction: column;
-        width: 100%;
-        flex: 1;
+        display: flex;
+        
+        margin : 10px;
     }
     &__parts{
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        padding: 20px;
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
-
     &__partieTxt{
         font-weight: 600;
         opacity: 0.6;
@@ -46,39 +45,116 @@
         margin-bottom: 20px;
     }
     &__items{
+        //max-width: 400px;
         display: flex;
-        width: 100%;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        
+        align-content: center;
+        flex:1;
     }
     &__commander{
         display: flex;
         justify-content: center;
         align-items: center;
         margin-bottom: 30px;
+        margin-top: 10px;
     }
 }
 
-@media screen and (min-width: 972px) {
-    .menu{
-        padding: 30px 30px 80px 30px;
-        &__parts{
-            margin: 0;
-            flex-direction: row;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        &__partieContainer{
-            margin: 0 40px 0 40px;
-        }
-        &__commander{
-            margin-top: 30px;
-            margin-bottom: 30px;
+.menu-item{
+    display: flex;
+    flex: 1;
+    border-radius: 20px;
+    background-color: $colour-secondary;
+    @include shadow;
+    overflow: hidden;
+    -webkit-clip-path: content-box;
+    clip-path: content-box;
+    margin-bottom: 20px;
+    animation: fonctionnementCardAnim 1000ms $animation-delay;
+    animation-fill-mode: backwards;
+    @for $i from 1 through 4{
+        &--#{$i}{
+            animation-delay: $animation-delay * $i;
+            opacity:1;
         }
     }
+    &__description{
+        transition: all $glissement-duration;
+        //background-color: $colour-mid;
+        padding:12px;
+        
+        @media screen and (min-width: 768px) {
+            width: 250px;
+        }
+        @media screen and (max-width: 321px) {
+            width: 180px;
+        }
+        @media screen and (max-width: 281px) {
+            width: 150px;
+        }
+    }
+    &__description p{
+        transition: all $glissement-duration;
+        white-space: nowrap;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
+        padding: 3px;
+        
+        @media screen and (max-width: 768px) {
+            width: 250px;
+        }
+        @media screen and (max-width: 321px) {
+            width: 220px;
+        }
+        @media screen and (max-width: 281px) {
+            width: 190px;
+        }
+    }
+    &:hover{
+        cursor: pointer;
+        .menu-item__check{transform: translateX(0px);}
+        .menu-item__price{transform: translateX(0px);}
+        .menu-item__check--circle{transform: rotate(360deg);}
+        .menu-item__description>p{
+            @media screen and (max-width: 321px) {
+                width: 160px;
+            }
+            @media screen and (max-width: 281px) {
+                width: 140px;
+            }
+        }
+    }
+    
+    &__price{
+        display: flex;
+        justify-content: center;
+        margin-top:auto;
+        width: 50px;
+        margin-bottom: 15px;
+        transition: all $glissement-duration;
+        background-color: $colour-secondary;
+        transform: translateX(100%);
+    }
+    &__check{
+        width: 50px;
+        transition: all $glissement-duration;
+        background-color: $colour-check;
+        display: flex;
+        transform: translateX(100%);
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2em;
+        color: $colour-secondary;
+        animation: glissement $glissement-duration ease-in-out alternate both paused;
+        &--circle{
+            transition: all $glissement-duration;
+            transform: rotate(0deg);
+        }
+    }
+    
 }
+
 
 .restaurantCard__heartE, .restaurantCard__heartF{
     position: absolute;
@@ -103,101 +179,7 @@
     }
 }
 
-$glissement-duration: 500ms;
 
-.menu-item{
-    width: 100%;
-    max-width: 800px;
-    border-radius: 20px;
-    background-color: $colour-secondary;
-    display: flex;
-    flex-direction: row;
-    @include shadow;
-    overflow: hidden;
-    -webkit-clip-path: content-box;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    animation: fonctionnementCardAnim 1000ms $animation-delay;
-    animation-fill-mode: backwards;
-    @for $i from 1 through 4{
-        &--#{$i}{
-            animation-delay: $animation-delay * $i;
-            opacity:1;
-        }
-    }
-    &__description{
-        transition: all $glissement-duration;
-        //background-color: $colour-mid;
-        padding:12px;
-    }
-    &__description p{
-        width: 330px;   
-        transition: all $glissement-duration;
-        white-space: nowrap;
-        overflow: hidden !important;
-        text-overflow: ellipsis;
-        padding: 3px;
-        
-    }
-    &__price{
-        flex:1;
-        margin-top:auto;
-        text-align: center;
-        margin-right: 10px;
-        margin-bottom: 15px;
-        transition: all $glissement-duration;
-        background-color: $colour-secondary;
-        transform: translateX(100%);
-        //animation: glissement $glissement-duration ease-in-out alternate both paused;
-    }
-    &__check{
-        flex:1;
-        width: 80px;
-        transition: all $glissement-duration;
-        background-color: $colour-check;
-        display: flex;
-        transform: translateX(100%);
-        justify-content: center;
-        align-items: center;
-        font-size: 1.5em;
-        color: $colour-secondary;
-        //animation: glissement $glissement-duration ease-in-out alternate both paused;
-        &--circle{
-            transition: all $glissement-duration;
-            transform: rotate(0deg);
-        }
-    }
-    &:hover{
-        cursor: pointer;
-        .menu-item__check{transform: translateX(0px);}
-        .menu-item__price{transform: translateX(0px);}
-        .menu-item__check--circle{transform: rotate(360deg);}
-        .menu-item__description>p{width: 180px;}
-        /*.menu-item__check{animation-play-state: running;}
-        .menu-item__price{animation-play-state: running;}*/
-    }
-    /*&:not(:hover){
-        .menu-item__check{animation: glissementOut $glissement-duration ease-in-out alternate both;}
-        .menu-item__price{animation: glissementOut $glissement-duration ease-in-out alternate both;}
-    }*/
-}
 
-/*@keyframes glissement{
-    0%{
-        transform: translateX(80px);
-    }
-    100%{
-        transform: translateX(0px);
-    }
-}
-
-@keyframes glissementOut{
-    0%{
-        transform: translateX(0px);
-    }
-    100%{
-        transform: translateX(80px);
-    }
-}*/
 
 

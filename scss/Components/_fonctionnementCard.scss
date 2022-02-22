@@ -13,12 +13,22 @@
     border-radius: 1rem;
     border: none;
     @include shadow;
+    transition: box-shadow 0.3s ease-in-out, background-color 0.3s;
     animation: fonctionnementCardAnim 1000ms $animation-delay;
     animation-fill-mode: backwards;
     @for $i from 1 through 3{
         &--#{$i}{
             animation-delay: $animation-delay * $i;
             opacity:1;
+            &:hover{
+                cursor: pointer;
+                @include shadowHover;
+                background-color:lighten($colour-gradup, 23%);
+                ::before{
+                    color: $colour-graddown;
+                }
+            }
+            
         }
     }
     &__content{
@@ -45,7 +55,9 @@
     &__content--icon{
         margin-right: 1em;
         font-size: x-large;
-        opacity: 60%;
+        &::before{
+            color: $colour-darkgrey;
+        }
     }
 }
 

@@ -11,7 +11,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 300ms ease-in-out;
     &:hover{
         cursor: pointer;
+        background: linear-gradient(lighten($colour-gradup, 10%), lighten($colour-graddown, 10%));
+        @include shadowHover;
+        &.textAver{
+            color: darken($colour-secondary, 100%);
+        }
     }
 }
