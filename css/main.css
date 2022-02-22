@@ -904,6 +904,10 @@ header {
   border: none;
   -webkit-box-shadow: 0px 2px 5px grey;
           box-shadow: 0px 2px 5px grey;
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
   overflow: hidden;
   width: 100%;
   margin-bottom: 30px;
@@ -939,6 +943,9 @@ header {
   -o-object-fit: cover;
      object-fit: cover;
   overflow: hidden;
+  opacity: 100%;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms;
 }
 
 .restaurantCard__txt {
@@ -984,7 +991,13 @@ header {
 }
 
 .restaurantCard:hover {
+  -webkit-box-shadow: 0px 2px 15px grey;
+          box-shadow: 0px 2px 15px grey;
   cursor: pointer;
+}
+
+.restaurantCard:hover .restaurantCard__image > img {
+  opacity: 70%;
 }
 
 .restaurantCard .restaurantCard__heartE, .restaurantCard .restaurantCard__heartF {

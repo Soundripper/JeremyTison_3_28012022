@@ -3,7 +3,9 @@
     color: $colour-primary;
     border-radius: 1rem;
     border: none;
-    @include shadow;
+    //@include shadow;
+    box-shadow: 0px 2px 5px grey;
+    transition: box-shadow 0.3s ease-in-out;
     overflow: hidden;
     width: 100%;
     margin-bottom: 30px; 
@@ -24,6 +26,8 @@
         width:100%;
         object-fit: cover;
         overflow: hidden;
+        opacity: 100%;
+        transition: opacity 300ms;
     }
     &__txt{
         margin: 13px;
@@ -52,7 +56,12 @@
         }
     }
     &:hover{
+        box-shadow: 0px 2px 15px grey;
         cursor: pointer;
+        .restaurantCard__image>img{
+            opacity: 70%;
+        }
+
     }
     .restaurantCard__heartE, .restaurantCard__heartF{
         position: absolute;
