@@ -367,7 +367,6 @@ header {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  max-width: 340px;
 }
 
 .menu__commander {
@@ -627,24 +626,27 @@ header {
           animation: logoProgress 3000ms alternate both;
 }
 
-.loader__bar {
+.loader__barProgress {
+  /*width: 100%;
+        background: linear-gradient($colour-gradup, $colour-graddown);
+        transform-origin: left;
+        animation: barProgress $loaderAnimDuration alternate both;
+        border-radius: 30px;*/
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 50px;
-  /*background-color: azure;*/
-  padding: 20px;
-}
-
-.loader__barProgress {
-  width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(#FF79DA, #9356DC);
-  -webkit-transform-origin: left;
-          transform-origin: left;
-  -webkit-animation: barProgress 3000ms alternate both;
-          animation: barProgress 3000ms alternate both;
-  border-radius: 30px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #FF79DA;
+  font-size: 5em;
+  -webkit-animation: barProgress 1s linear infinite;
+          animation: barProgress 1s linear infinite;
 }
 
 .container {
@@ -654,27 +656,35 @@ header {
 
 @-webkit-keyframes barProgress {
   0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-    opacity: 0;
+    -webkit-transform: scale(1) rotate(0deg);
+            transform: scale(1) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: scale(0.5) rotate(180deg);
+            transform: scale(0.5) rotate(180deg);
+    color: #9356DC;
   }
   100% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-    opacity: 1;
+    -webkit-transform: scale(1) rotate(360deg);
+            transform: scale(1) rotate(360deg);
+    color: #FF79DA;
   }
 }
 
 @keyframes barProgress {
   0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-    opacity: 0;
+    -webkit-transform: scale(1) rotate(0deg);
+            transform: scale(1) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: scale(0.5) rotate(180deg);
+            transform: scale(0.5) rotate(180deg);
+    color: #9356DC;
   }
   100% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-    opacity: 1;
+    -webkit-transform: scale(1) rotate(360deg);
+            transform: scale(1) rotate(360deg);
+    color: #FF79DA;
   }
 }
 

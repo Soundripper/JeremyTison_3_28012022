@@ -15,17 +15,21 @@ $loaderAnimDuration : 3000ms;
         align-self: center;
         animation: logoProgress $loaderAnimDuration alternate both;
     }
-    &__bar{
-        display: flex;
-        height: 50px;
-        padding : 20px;
-    }
     &__barProgress{
-        width: 100%;
+        /*width: 100%;
         background: linear-gradient($colour-gradup, $colour-graddown);
         transform-origin: left;
         animation: barProgress $loaderAnimDuration alternate both;
-        border-radius: 30px;
+        border-radius: 30px;*/
+        //transform-origin: center;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        color: #FF79DA;
+        font-size: 5em;
+        animation: barProgress 1s linear infinite ;
+        
     }
 }
 
@@ -34,14 +38,18 @@ $loaderAnimDuration : 3000ms;
 }
 
 @keyframes barProgress{
-    0%{
-        transform: scaleX(0);
-        opacity: 0;
-    }
-    100%{
-        transform: scaleX(1);
-        opacity: 1;
-    }
+    0% {
+        transform: scale(1) rotate(0deg);
+      }
+      50%{
+        transform: scale(0.5) rotate(180deg);
+        color: #9356DC;
+      }
+      100% {
+        transform: scale(1) rotate(360deg);
+        color: #FF79DA;
+
+      }
 }
 
 @keyframes logoProgress{

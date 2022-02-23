@@ -17,6 +17,7 @@
         margin-bottom: 30px;
         margin-left: 5px;
         & h1{
+            //Galaxy Fold
             @media screen and (max-width: 281px) {
                 width: 150px;
             }
@@ -32,6 +33,7 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
+        //Desktop row wrap
         @media screen and (min-width: 768px) {
             flex-direction: row;
             flex-wrap: wrap;
@@ -59,7 +61,6 @@
         flex-direction: column;
         justify-content: center;
         align-content: center;
-        max-width: 340px;
     }
     &__commander{
         display: flex;
