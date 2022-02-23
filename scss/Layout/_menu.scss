@@ -16,20 +16,28 @@
         position: relative;
         margin-bottom: 30px;
         margin-left: 5px;
+        & h1{
+            @media screen and (max-width: 281px) {
+                width: 150px;
+            }
+        }
     }
     &__partieContainer{
         flex-direction: column;
         display: flex;
-        margin : 10px;
+        margin : 0 15px 0 15px;
     }
     &__parts{
         display: flex;
         flex-direction: column;
-        align-self: center;
+        align-items: center;
+        width: 100%;
         @media screen and (min-width: 768px) {
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
+            align-content: center;
+            align-items: unset;
         }
     }
     &__partieTxt{
@@ -51,22 +59,22 @@
         flex-direction: column;
         justify-content: center;
         align-content: center;
-        flex:1;
+        max-width: 340px;
     }
     &__commander{
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 20px;
-        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-top: 15px;
     }
 }
 
 .menu-item{
     display: flex;
-    flex: 1;
     border-radius: 20px;
     background-color: $colour-secondary;
+    //max-width: 90vw;
     @include shadow;
     overflow: hidden;
     -webkit-clip-path: content-box;
@@ -82,19 +90,16 @@
     }
     &__description{
         transition: all $glissement-duration;
-        //background-color: $colour-mid;
         padding:12px;
-        @media screen and (min-width: 769px) {
-            width: 240px;
-        }
+        max-width: 240px;
         @media screen and (max-width: 768px) {
-            width: 240px;
+            max-width: 240px;
         }
         @media screen and (max-width: 321px) {
             width: 190px;
         }
         @media screen and (max-width: 281px) {
-            width: 160px;
+            width: 150px;
         }
     }
     &__description p{
@@ -103,9 +108,7 @@
         overflow: hidden !important;
         text-overflow: ellipsis;
         padding: 3px;
-        @media screen and (min-width: 769px) {
-            width: 300px;
-        }
+        width: 300px;
         @media screen and (max-width: 768px) {
             width: 260px;
         }
@@ -148,13 +151,13 @@
         transform: translateX(100%);
     }
     &__check{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 50px;
         transition: all $glissement-duration;
         background-color: $colour-check;
-        display: flex;
         transform: translateX(100%);
-        justify-content: center;
-        align-items: center;
         font-size: 1.2em;
         color: $colour-secondary;
         animation: glissement $glissement-duration ease-in-out alternate both paused;
