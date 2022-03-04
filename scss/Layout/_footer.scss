@@ -1,7 +1,7 @@
 .footer{
     display: flex;
     flex-direction: column;
-    justify-items: space-between;
+    //justify-items: space-between;
     padding: $content-padding;
     background-color: lighten($colour-primary, 20%);
     & i{
@@ -22,7 +22,7 @@
         display: flex;
         flex-direction: column;
         flex:1;
-        justify-items: space-between;
+        //justify-items: space-between;
     }
     &__partenaire i{
         font-size: 0.7em;
