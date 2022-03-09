@@ -424,8 +424,8 @@ header {
 }
 
 .menu-item__description {
-  -webkit-transition: all 500ms;
-  transition: all 500ms;
+  -webkit-transition: all 1000ms;
+  transition: all 1000ms;
   padding: 12px;
   max-width: 240px;
 }
@@ -449,8 +449,8 @@ header {
 }
 
 .menu-item__description p {
-  -webkit-transition: all 500ms;
-  transition: all 500ms;
+  -webkit-transition: all 1000ms;
+  transition: all 1000ms;
   white-space: nowrap;
   overflow: hidden !important;
   text-overflow: ellipsis;
@@ -529,8 +529,8 @@ header {
   margin-top: auto;
   width: 50px;
   margin-bottom: 15px;
-  -webkit-transition: all 500ms;
-  transition: all 500ms;
+  -webkit-transition: all 1000ms;
+  transition: all 1000ms;
   background-color: white;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
@@ -547,20 +547,20 @@ header {
       -ms-flex-align: center;
           align-items: center;
   width: 50px;
-  -webkit-transition: all 500ms;
-  transition: all 500ms;
+  -webkit-transition: all 1000ms;
+  transition: all 1000ms;
   background-color: #99E2D0;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   font-size: 1.2em;
   color: white;
-  -webkit-animation: glissement 500ms ease-in-out alternate both paused;
-          animation: glissement 500ms ease-in-out alternate both paused;
+  -webkit-animation: glissement 1000ms ease-in-out alternate both paused;
+          animation: glissement 1000ms ease-in-out alternate both paused;
 }
 
 .menu-item__check--circle {
-  -webkit-transition: all 500ms;
-  transition: all 500ms;
+  -webkit-transition: all 1000ms;
+  transition: all 1000ms;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }
